@@ -1,0 +1,1529 @@
+/* =========================================================
+   Event Planning & Brand Activation
+   Clean standalone stylesheet for event-planning.html
+   This file intentionally does NOT depend on styles.css.
+========================================================= */
+
+:root {
+  --paper: #f7f1e8;
+  --ink: #2f2a26;
+  --muted: #71685f;
+  --line: rgba(47, 42, 38, 0.16);
+  --green: #1A4029;
+  --sage: #6f7c6c;
+  --cream: rgba(255, 252, 246, 0.82);
+  --cream-strong: rgba(255, 252, 246, 0.92);
+  --shadow-soft: 0 10px 28px rgba(47, 42, 38, 0.05);
+  --page-width: 1120px;
+  --side-gap: 44px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body.event-body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.45;
+}
+
+body.event-body a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body.event-body h1,
+body.event-body h2,
+body.event-body h3,
+body.event-body p,
+body.event-body figure {
+  margin-top: 0;
+}
+
+.icon-defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* -------------------- top nav -------------------- */
+
+.case-top-nav {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(24px, 4vw, 56px);
+  background: rgba(247, 241, 232, 0.93);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(14px);
+}
+
+.case-brand {
+  color: var(--ink);
+  font-size: 0.98rem;
+  font-weight: 850;
+}
+
+.case-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(20px, 3vw, 36px);
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 750;
+}
+
+.case-nav a:hover {
+  color: var(--green);
+}
+
+/* -------------------- page rail -------------------- */
+
+.event-page {
+  width: 100%;
+  padding-top: 54px;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(255, 255, 255, 0.9), transparent 30%),
+    radial-gradient(circle at 88% 6%, rgba(215, 168, 92, 0.08), transparent 32%),
+    var(--paper);
+}
+
+.event-hero,
+.event-section,
+.event-case-section,
+.event-cta {
+  width: min(var(--page-width), calc(100vw - var(--side-gap) * 2));
+  max-width: var(--page-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.event-section,
+.event-case-section {
+  border-top: 1px solid var(--line);
+  padding: 17px 0 18px;
+}
+
+.compact-section {
+  padding-top: 17px;
+  padding-bottom: 16px;
+}
+
+.event-section-head,
+.event-case-header h2 {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+}
+
+.event-section-head {
+  margin-bottom: 12px;
+}
+
+.event-section-head h2,
+.event-case-header h2 {
+  margin: 0;
+  color: var(--green);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.35rem, 2vw, 1.7rem);
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+
+.event-section-head p,
+.event-case-header h2 span {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.76rem;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+/* -------------------- reusable icons -------------------- */
+
+.round-icon,
+.workflow-icon {
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--green);
+  color: #fffaf2;
+  flex: 0 0 auto;
+}
+
+.round-icon {
+  width: 46px;
+  height: 46px;
+}
+
+.round-icon.small {
+  width: 42px;
+  height: 42px;
+}
+
+.round-icon svg,
+.workflow-icon svg,
+.deliverable-grid svg,
+.event-value-grid svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.round-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* =========================================================
+   Hero
+========================================================= */
+
+/* 让页面顶部给固定导航留出足够空间，避免 Hero 标题被挡住 */
+.event-page {
+  padding-top: 64px;
+}
+
+.event-hero {
+  width: min(var(--page-width), calc(100vw - var(--side-gap) * 2));
+  max-width: var(--page-width);
+  min-height: 390px;
+  height: 390px;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  align-items: stretch;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+}
+
+.event-hero-copy {
+  min-width: 0;
+  min-height: 390px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 34px 16px 34px 0;
+}
+
+.event-hero-copy h1 {
+  margin: 0 0 18px;
+  max-width: 100%;
+  color: #173724;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.75rem, 3.75vw, 3.7rem);
+  line-height: 0.96;
+  font-weight: 500;
+  letter-spacing: -0.045em;
+}
+
+.event-hero-copy h1 span {
+  display: block;
+  white-space: nowrap;
+}
+
+.event-hero-copy p {
+  max-width: 370px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+.event-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  max-width: 380px;
+}
+
+.event-tags span {
+  min-height: 31px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 14px;
+  border: 1px solid rgba(47, 42, 38, 0.16);
+  border-radius: 999px;
+  background: rgba(255, 252, 246, 0.84);
+  color: var(--green);
+  font-size: 0.72rem;
+  line-height: 1;
+  font-weight: 760;
+  white-space: nowrap;
+}
+
+.event-hero-gallery {
+  position: relative;
+  min-width: 0;
+  min-height: 390px;
+  height: 390px;
+  overflow: hidden;
+  background: #eee8dc;
+}
+
+.event-hero-gallery img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.event-hero-gallery::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(247, 241, 232, 0.98) 0%,
+    rgba(247, 241, 232, 0.82) 12%,
+    rgba(247, 241, 232, 0.42) 28%,
+    rgba(247, 241, 232, 0.08) 46%,
+    rgba(247, 241, 232, 0) 62%
+  );
+}
+
+/* =========================================================
+   Quick Overview
+========================================================= */
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.overview-card {
+  min-height: 78px;
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr);
+  align-items: center;
+  gap: 13px;
+  padding: 13px 16px;
+  border: 1px solid rgba(47, 42, 38, 0.12);
+  border-radius: 6px;
+  background: var(--cream);
+  box-shadow: none;
+}
+
+.overview-card .round-icon {
+  width: 46px;
+  height: 46px;
+}
+
+.overview-card h3 {
+  margin: 0 0 3px;
+  color: var(--ink);
+  font-size: 0.82rem;
+  line-height: 1.12;
+  font-weight: 850;
+}
+
+.overview-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.68rem;
+  line-height: 1.25;
+}
+
+.overview-number {
+  display: none;
+}
+
+/* =========================================================
+   Event Categories
+========================================================= */
+
+.event-category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.event-category-card {
+  min-height: 116px;
+  display: grid;
+  grid-template-columns: 44% 56%;
+  align-items: stretch;
+  gap: 10px;
+  padding: 8px;
+  border: 1px solid rgba(47, 42, 38, 0.12);
+  border-radius: 6px;
+  background: var(--cream);
+  overflow: hidden;
+}
+
+.category-text {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  align-content: center;
+  align-items: start;
+  gap: 10px;
+  padding: 6px 4px 6px 6px;
+}
+
+.category-text > div:not(.round-icon) {
+  min-width: 0;
+}
+
+.category-text h3 {
+  margin: 0 0 3px;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.92rem;
+  line-height: 1.08;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.category-text p {
+  margin: 0 0 7px;
+  color: var(--muted);
+  font-size: 0.66rem;
+  line-height: 1.15;
+  font-weight: 500;
+}
+
+.category-text span {
+  display: block;
+  max-width: 190px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.67rem;
+  line-height: 1.34;
+  font-weight: 500;
+}
+
+.event-category-card > img {
+  width: 100%;
+  height: 100%;
+  min-height: 96px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 4px;
+  align-self: stretch;
+}
+
+/* =========================================================
+   Planning Workflow
+========================================================= */
+
+.event-workflow {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+  padding: 6px 12px 0;
+}
+
+.event-workflow article {
+  position: relative;
+  min-width: 0;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+}
+
+.event-workflow article:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: calc(50% + 32px);
+  width: calc(100% - 34px);
+  border-top: 1px solid rgba(47, 42, 38, 0.24);
+}
+
+.workflow-icon {
+  width: 52px;
+  height: 52px;
+  background: rgba(255, 252, 246, 0.82);
+  border: 1px solid rgba(111, 124, 108, 0.32);
+  color: var(--green);
+}
+
+.workflow-icon svg {
+  width: 21px;
+  height: 21px;
+}
+
+.event-workflow span {
+  margin-top: 7px;
+  color: var(--sage);
+  font-size: 0.68rem;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.event-workflow h3 {
+  margin: 3px 0 1px;
+  color: var(--ink);
+  font-size: 0.72rem;
+  line-height: 1.12;
+  font-weight: 850;
+  white-space: nowrap;
+}
+
+.event-workflow p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.61rem;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   Case Analysis
+========================================================= */
+
+.event-case-section {
+  padding-top: 17px;
+  padding-bottom: 18px;
+}
+
+.event-case-header {
+  margin-bottom: 12px;
+}
+
+.event-case-header h2 {
+  margin-bottom: 9px;
+}
+
+.event-case-header p {
+  max-width: 720px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.76rem;
+  line-height: 1.45;
+}
+
+.event-case-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  align-items: stretch;
+}
+
+.event-case-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(47, 42, 38, 0.12);
+  border-radius: 6px;
+  background: var(--cream);
+  box-shadow: var(--shadow-soft);
+}
+
+.event-case-image {
+  height: 118px;
+  min-height: 118px;
+  max-height: 118px;
+  margin: 0;
+  overflow: hidden;
+}
+
+.event-case-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.event-case-content {
+  flex: 1;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  padding: 9px 9px 10px;
+}
+
+.event-case-content h3 {
+  min-height: 2.2em;
+  margin: 0 0 4px;
+  color: var(--green);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.78rem;
+  line-height: 1.08;
+  font-weight: 600;
+}
+
+.event-case-subtitle {
+  margin: 0 0 7px;
+  min-height: 1.25em;
+  color: var(--muted);
+  font-size: 0.56rem;
+  line-height: 1.2;
+}
+
+.event-case-info {
+  display: grid;
+  align-content: start;
+  gap: 5px;
+  margin: 0 0 7px;
+}
+
+.event-case-info p {
+  margin: 0;
+  color: var(--ink);
+  font-size: 0.55rem;
+  line-height: 1.28;
+}
+
+.event-case-info strong {
+  margin-right: 4px;
+  color: var(--ink);
+  font-weight: 900;
+}
+
+.event-case-tags {
+  margin-top: auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5px;
+}
+
+.event-case-tags span {
+  min-height: 26px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 5px;
+  border: 1px solid rgba(47, 42, 38, 0.12);
+  border-radius: 5px;
+  background: rgba(255, 252, 246, 0.68);
+  color: var(--green);
+  font-size: 0.5rem;
+  line-height: 1.05;
+  font-weight: 850;
+}
+
+.event-case-tags svg {
+  width: 10px;
+  height: 10px;
+  flex: 0 0 10px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.event-case-dots {
+  display: none;
+}
+
+/* =========================================================
+   Deliverables
+========================================================= */
+
+.deliverable-grid {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.deliverable-grid article {
+  min-height: 70px;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  padding: 9px 6px;
+  border: 1px solid rgba(47, 42, 38, 0.12);
+  border-radius: 6px;
+  background: var(--cream);
+  text-align: center;
+}
+
+.deliverable-grid svg {
+  width: 20px;
+  height: 20px;
+  color: var(--green);
+}
+
+.deliverable-grid h3 {
+  margin: 5px 0 2px;
+  color: var(--ink);
+  font-size: 0.58rem;
+  line-height: 1.1;
+  font-weight: 850;
+}
+
+.deliverable-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.52rem;
+  line-height: 1.1;
+}
+
+/* =========================================================
+   Value Created
+========================================================= */
+
+.event-value-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.event-value-grid article {
+  min-height: 82px;
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid rgba(47, 42, 38, 0.12);
+  border-radius: 6px;
+  background: var(--cream);
+}
+
+.event-value-grid svg {
+  width: 28px;
+  height: 28px;
+  color: var(--green);
+}
+
+.event-value-grid h3 {
+  margin: 0 0 4px;
+  color: var(--ink);
+  font-size: 0.68rem;
+  line-height: 1.12;
+  font-weight: 850;
+}
+
+.event-value-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.54rem;
+  line-height: 1.25;
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.event-cta {
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 12px 18px;
+  background: #263b24;
+  color: #fffaf2;
+}
+
+.event-cta p {
+  margin: 0;
+  color: #fffaf2;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.event-cta a {
+  min-width: 180px;
+  min-height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 18px;
+  border: 1px solid rgba(255, 250, 242, 0.55);
+  border-radius: 999px;
+  color: #fffaf2;
+  font-size: 0.62rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   Responsive
+========================================================= */
+
+@media (max-width: 980px) {
+  :root {
+    --side-gap: 28px;
+  }
+
+  .event-hero {
+    height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .event-hero-copy {
+    height: auto;
+    padding: 28px 0 20px;
+  }
+
+  .event-hero-gallery {
+    height: 320px;
+  }
+
+  .event-category-grid,
+  .event-case-grid,
+  .event-value-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .deliverable-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .event-workflow {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 5px;
+  }
+
+  .event-workflow article:not(:last-child)::after {
+    display: none;
+  }
+
+  .event-workflow h3,
+  .event-workflow p {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 720px) {
+  :root {
+    --side-gap: 18px;
+  }
+
+  .case-top-nav {
+    padding: 0 18px;
+  }
+
+  .case-nav {
+    gap: 14px;
+    font-size: 0.8rem;
+  }
+
+  .overview-grid,
+  .event-category-grid,
+  .event-case-grid,
+  .event-value-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .event-category-card {
+    grid-template-columns: 1fr;
+  }
+
+  .event-category-card > img {
+    height: 170px;
+    min-height: 170px;
+  }
+
+  .event-workflow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 18px;
+  }
+
+  .deliverable-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .event-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+/* =========================================================
+   EVENT PLANNING - READABILITY FINAL FIX
+   目标：
+   1. 修复 Hero 标题被导航遮挡
+   2. 全页面说明文字放大约 40%
+   3. 优化 Value Created 文字排版
+========================================================= */
+
+/* ---------- 1. 修复 Head 标题被遮挡 ---------- */
+
+.event-page {
+  padding-top: 58px !important;
+}
+
+.event-hero {
+  min-height: 420px !important;
+  height: auto !important;
+  max-height: none !important;
+  padding-top: 34px !important;
+  padding-bottom: 34px !important;
+  overflow: visible !important;
+}
+
+.event-hero-copy {
+  height: auto !important;
+  min-height: 360px !important;
+  max-height: none !important;
+  justify-content: center !important;
+  padding-top: 24px !important;
+  padding-bottom: 24px !important;
+  overflow: visible !important;
+}
+
+.event-hero h1 {
+  margin-top: 0 !important;
+  margin-bottom: 20px !important;
+  font-size: clamp(3.8rem, 5.2vw, 5.7rem) !important;
+  line-height: 0.94 !important;
+  overflow: visible !important;
+}
+
+.event-hero-gallery,
+.event-hero-single {
+  height: auto !important;
+  min-height: 420px !important;
+  max-height: none !important;
+}
+
+.event-hero-gallery img,
+.event-hero-single img {
+  height: 420px !important;
+  min-height: 420px !important;
+  max-height: 420px !important;
+  object-fit: cover !important;
+}
+
+/* ---------- 2. 全页面说明文字整体放大，提高可读性 ---------- */
+
+/* Hero 描述 */
+.event-hero-copy > p {
+  font-size: 1rem !important;
+  line-height: 1.55 !important;
+}
+
+/* Hero 标签 */
+.event-tags span {
+  font-size: 0.78rem !important;
+  min-height: 30px !important;
+  padding: 0 13px !important;
+}
+
+/* Section 中文小标题 */
+.event-section-head p,
+.event-case-header h2 span {
+  font-size: 0.9rem !important;
+  line-height: 1.25 !important;
+}
+
+/* Quick Overview */
+.overview-card h3 {
+  font-size: 0.98rem !important;
+  line-height: 1.18 !important;
+}
+
+.overview-card p {
+  font-size: 0.86rem !important;
+  line-height: 1.35 !important;
+}
+
+/* Event Categories */
+.event-category-card .category-text h3 {
+  font-size: 1.05rem !important;
+  line-height: 1.12 !important;
+}
+
+.event-category-card .category-text p {
+  font-size: 0.82rem !important;
+  line-height: 1.28 !important;
+}
+
+.event-category-card .category-text span {
+  font-size: 0.86rem !important;
+  line-height: 1.42 !important;
+  max-width: 210px !important;
+}
+
+/* Planning Workflow */
+.event-workflow span {
+  font-size: 0.88rem !important;
+}
+
+.event-workflow h3 {
+  font-size: 0.92rem !important;
+  line-height: 1.18 !important;
+}
+
+.event-workflow p {
+  font-size: 0.82rem !important;
+  line-height: 1.25 !important;
+}
+
+/* Case Analysis */
+.event-case-header p {
+  font-size: 0.95rem !important;
+  line-height: 1.55 !important;
+}
+
+.event-case-content h3 {
+  font-size: 0.98rem !important;
+  line-height: 1.12 !important;
+}
+
+.event-case-subtitle {
+  font-size: 0.78rem !important;
+  line-height: 1.35 !important;
+}
+
+.event-case-info p {
+  font-size: 0.76rem !important;
+  line-height: 1.42 !important;
+}
+
+.event-case-tags span {
+  font-size: 0.68rem !important;
+  line-height: 1.12 !important;
+}
+
+/* Deliverables */
+.deliverable-grid h3 {
+  font-size: 0.76rem !important;
+  line-height: 1.15 !important;
+}
+
+.deliverable-grid p {
+  font-size: 0.68rem !important;
+  line-height: 1.18 !important;
+}
+
+/* ---------- 3. Value Created 排版重做：文字连贯显示 ---------- */
+
+.event-value-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+}
+
+.event-value-grid article {
+  min-height: 128px !important;
+  display: grid !important;
+  grid-template-columns: 42px minmax(0, 1fr) !important;
+  grid-template-rows: auto auto !important;
+  column-gap: 14px !important;
+  row-gap: 8px !important;
+  align-items: start !important;
+  padding: 18px 18px !important;
+}
+
+.event-value-grid svg {
+  grid-column: 1 !important;
+  grid-row: 1 / span 2 !important;
+  width: 32px !important;
+  height: 32px !important;
+  margin-top: 2px !important;
+}
+
+.event-value-grid h3 {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+  margin: 0 !important;
+  font-size: 0.98rem !important;
+  line-height: 1.18 !important;
+  font-weight: 850 !important;
+}
+
+.event-value-grid p {
+  grid-column: 2 !important;
+  grid-row: 2 !important;
+  margin: 0 !important;
+  max-width: none !important;
+  color: var(--ep-muted) !important;
+  font-size: 0.86rem !important;
+  line-height: 1.45 !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  white-space: normal !important;
+}
+
+/* ---------- 4. 因为文字变大，适当增加部分卡片高度 ---------- */
+
+.overview-card {
+  min-height: 88px !important;
+}
+
+.event-category-card {
+  min-height: 160px !important;
+}
+
+.event-category-card > img {
+  height: 118px !important;
+  min-height: 118px !important;
+  max-height: 118px !important;
+}
+
+.event-case-image,
+.event-case-image img {
+  height: 138px !important;
+  min-height: 138px !important;
+  max-height: 138px !important;
+}
+
+.deliverable-grid article {
+  min-height: 86px !important;
+}
+
+/* ---------- 5. 中等屏幕保持可读 ---------- */
+
+@media (max-width: 980px) {
+  .event-hero {
+    padding-top: 28px !important;
+  }
+
+  .event-hero h1 {
+    font-size: clamp(3.2rem, 9vw, 4.8rem) !important;
+  }
+
+  .event-hero-gallery,
+  .event-hero-single,
+  .event-hero-gallery img,
+  .event-hero-single img {
+    height: 360px !important;
+    min-height: 360px !important;
+    max-height: 360px !important;
+  }
+
+  .event-value-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+/* =========================================================
+   EVENT PLANNING - CTA TEXT SIZE FIX
+   底部墨绿色联系板块文字放大
+========================================================= */
+
+.event-cta p {
+  font-size: 1.04rem !important;
+  line-height: 1.35 !important;
+  font-weight: 850 !important;
+}
+
+.event-cta a {
+  font-size: 0.9rem !important;
+  line-height: 1 !important;
+  font-weight: 850 !important;
+  min-height: 44px !important;
+  padding: 0 26px !important;
+}
+
+.event-cta {
+  min-height: 76px !important;
+  padding: 18px 26px !important;
+}
+/* =========================================================
+   HERO TITLE FINAL SAFE FIX
+   目标：
+   1. 标题固定两行：Event Planning & / Brand Activation
+   2. 任何网页宽度下文字都不能被图片遮挡
+   3. 左文字区约 40%，右图片区约 60%
+========================================================= */
+
+.event-hero {
+  grid-template-columns: minmax(430px, 40%) minmax(0, 1fr) !important;
+  overflow: hidden !important;
+}
+
+.event-hero-copy {
+  min-width: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 34px 18px 34px 0 !important;
+  overflow: hidden !important;
+  z-index: 2 !important;
+}
+
+.event-hero-copy h1 {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 0 18px !important;
+
+  font-size: clamp(2.6rem, 3.35vw, 3.35rem) !important;
+  line-height: 0.98 !important;
+  letter-spacing: -0.045em !important;
+
+  overflow: visible !important;
+}
+
+.event-hero-copy h1 span {
+  display: block !important;
+  white-space: nowrap !important;
+}
+
+/* 说明文字保持连贯，不被压缩得太窄 */
+.event-hero-copy p {
+  max-width: 390px !important;
+  font-size: 1rem !important;
+  line-height: 1.58 !important;
+}
+
+/* 图片区永远从右侧列开始，不能压到文字区 */
+.event-hero-gallery {
+  min-width: 0 !important;
+  overflow: hidden !important;
+}
+
+/* 中等屏幕：仍保持左右结构，但进一步缩小标题 */
+@media (max-width: 1120px) {
+  .event-hero {
+    grid-template-columns: minmax(390px, 42%) minmax(0, 1fr) !important;
+  }
+
+  .event-hero-copy h1 {
+    font-size: clamp(2.35rem, 3.2vw, 3rem) !important;
+  }
+}
+
+/* 窄屏：改成上下结构，保证文字永远完整显示 */
+@media (max-width: 900px) {
+  .event-hero {
+    grid-template-columns: 1fr !important;
+    height: auto !important;
+    min-height: auto !important;
+    overflow: visible !important;
+  }
+
+  .event-hero-copy {
+    padding: 34px 0 26px !important;
+    overflow: visible !important;
+  }
+
+  .event-hero-copy h1 {
+    font-size: clamp(2.6rem, 10vw, 4rem) !important;
+    max-width: 100% !important;
+  }
+
+  .event-hero-gallery {
+    height: 320px !important;
+    min-height: 320px !important;
+  }
+
+  .event-hero-gallery img {
+    height: 320px !important;
+    min-height: 320px !important;
+  }
+}
+/* =========================================================
+   HERO TITLE FINAL SIZE FIX
+   目标：
+   1. Hero 标题放大，恢复标题视觉重量
+   2. 始终保持两行：
+      Event Planning &
+      Brand Activation
+   3. 不允许文字遮挡图片
+========================================================= */
+
+.event-hero {
+  grid-template-columns: minmax(560px, 48%) minmax(0, 1fr) !important;
+  min-height: 430px !important;
+  height: 430px !important;
+  overflow: hidden !important;
+}
+
+.event-hero-copy {
+  min-width: 0 !important;
+  width: 100% !important;
+  padding: 40px 28px 40px 0 !important;
+  overflow: visible !important;
+}
+
+.event-hero-copy h1 {
+  max-width: 560px !important;
+  margin: 0 0 22px !important;
+
+  font-size: clamp(4.1rem, 5.25vw, 5.15rem) !important;
+  line-height: 0.94 !important;
+  letter-spacing: -0.055em !important;
+
+  overflow: visible !important;
+}
+
+.event-hero-copy h1 span {
+  display: block !important;
+  white-space: nowrap !important;
+}
+
+.event-hero-copy p {
+  max-width: 430px !important;
+  font-size: 1.05rem !important;
+  line-height: 1.58 !important;
+}
+
+.event-tags {
+  margin-top: 22px !important;
+  max-width: 500px !important;
+}
+
+.event-hero-gallery {
+  height: 430px !important;
+  min-height: 430px !important;
+  max-height: 430px !important;
+}
+
+.event-hero-gallery img {
+  height: 430px !important;
+  min-height: 430px !important;
+  max-height: 430px !important;
+  object-fit: cover !important;
+}
+
+/* 中等屏幕：标题仍然两行，但略微缩小，防止压到图片 */
+@media (max-width: 1180px) {
+  .event-hero {
+    grid-template-columns: minmax(500px, 48%) minmax(0, 1fr) !important;
+  }
+
+  .event-hero-copy h1 {
+    font-size: clamp(3.65rem, 4.8vw, 4.55rem) !important;
+    max-width: 500px !important;
+  }
+}
+
+/* 窄屏：改成上下结构，保证标题永远完整显示 */
+@media (max-width: 960px) {
+  .event-hero {
+    grid-template-columns: 1fr !important;
+    height: auto !important;
+    min-height: auto !important;
+    overflow: visible !important;
+  }
+
+  .event-hero-copy {
+    padding: 38px 0 28px !important;
+  }
+
+  .event-hero-copy h1 {
+    max-width: 100% !important;
+    font-size: clamp(3.5rem, 10vw, 5rem) !important;
+  }
+
+  .event-hero-gallery,
+  .event-hero-gallery img {
+    height: 340px !important;
+    min-height: 340px !important;
+    max-height: 340px !important;
+  }
+}
+/* =========================================================
+   EVENT PLANNING - COLOR TONE OVERRIDE
+   只改色调，不改排版 / 结构 / 尺寸 / 文案
+   目标：从深墨绿改为更柔和的 sage green + warm beige 氛围
+========================================================= */
+
+.event-body.event-planning-ref-layout {
+  --ep-bg: #f6f1e8;
+  --ep-surface: #fbf8f2;
+  --ep-surface-2: #f8f3ea;
+  --ep-line: #ddd3c3;
+  --ep-line-soft: #e8dfd2;
+  --ep-text: #3d342d;
+  --ep-muted: #776c5f;
+  --ep-green: #7f8f7d;
+  --ep-green-deep: #667762;
+  --ep-green-soft: #a9b6a3;
+  --ep-khaki: #b9a07b;
+  --ep-khaki-soft: #d7c4a4;
+  --ep-white: #fffdf9;
+}
+
+/* 页面底色 */
+.event-body.event-planning-ref-layout,
+.event-body.event-planning-ref-layout .event-page {
+  background: var(--ep-bg) !important;
+  color: var(--ep-text) !important;
+}
+
+/* 顶部导航 */
+.event-body.event-planning-ref-layout .case-top-nav {
+  background: rgba(246, 241, 232, 0.94) !important;
+  border-bottom: 1px solid var(--ep-line) !important;
+}
+
+.event-body.event-planning-ref-layout .case-brand,
+.event-body.event-planning-ref-layout .case-nav a {
+  color: var(--ep-text) !important;
+}
+
+/* 全页面标题色：由墨绿改为更柔和的绿色 */
+.event-body.event-planning-ref-layout .event-hero-copy h1,
+.event-body.event-planning-ref-layout .event-section-heading h2,
+.event-body.event-planning-ref-layout .event-section-title,
+.event-body.event-planning-ref-layout .event-deliverables-title,
+.event-body.event-planning-ref-layout .event-value-title,
+.event-body.event-planning-ref-layout .event-case-header h2,
+.event-body.event-planning-ref-layout .event-workflow-title {
+  color: var(--ep-green-deep) !important;
+}
+
+/* 英文/正文文字 */
+.event-body.event-planning-ref-layout p,
+.event-body.event-planning-ref-layout .event-hero-copy p,
+.event-body.event-planning-ref-layout .event-case-header p,
+.event-body.event-planning-ref-layout .event-category-card p,
+.event-body.event-planning-ref-layout .event-value-card p,
+.event-body.event-planning-ref-layout .event-case-card p,
+.event-body.event-planning-ref-layout .event-deliverable-item span,
+.event-body.event-planning-ref-layout .event-workflow-step p {
+  color: var(--ep-muted) !important;
+}
+
+/* 中文副标题 */
+.event-body.event-planning-ref-layout .section-sub-cn,
+.event-body.event-planning-ref-layout .event-title-cn,
+.event-body.event-planning-ref-layout .event-sub-cn {
+  color: #938677 !important;
+}
+
+/* Hero 区域标签 pills */
+.event-body.event-planning-ref-layout .event-tags span {
+  background: var(--ep-surface) !important;
+  border: 1px solid var(--ep-line) !important;
+  color: var(--ep-green-deep) !important;
+}
+
+/* 所有卡片底色 & 边框柔和化 */
+.event-body.event-planning-ref-layout .event-overview-card,
+.event-body.event-planning-ref-layout .event-category-card,
+.event-body.event-planning-ref-layout .event-case-card,
+.event-body.event-planning-ref-layout .event-deliverable-item,
+.event-body.event-planning-ref-layout .event-value-card {
+  background: var(--ep-surface) !important;
+  border: 1px solid var(--ep-line-soft) !important;
+  box-shadow: none !important;
+}
+
+/* Quick Overview 图标圆形 */
+.event-body.event-planning-ref-layout .event-overview-card .event-icon-circle {
+  background: #7f907c !important;
+  color: var(--ep-white) !important;
+}
+
+/* Event Categories 图标圆形 */
+.event-body.event-planning-ref-layout .event-category-card .event-icon-circle {
+  background: var(--ep-green-deep) !important;
+  color: var(--ep-white) !important;
+}
+
+/* Workflow 圆圈：改成更浅更柔和 */
+.event-body.event-planning-ref-layout .event-workflow-step .event-icon-circle {
+  background: #f1ede4 !important;
+  border: 1px solid #cdbfa9 !important;
+  color: var(--ep-green-deep) !important;
+}
+
+/* Workflow 编号 */
+.event-body.event-planning-ref-layout .event-workflow-step .step-no {
+  color: #8b9a87 !important;
+}
+
+/* Deliverables 图标 */
+.event-body.event-planning-ref-layout .event-deliverable-item svg,
+.event-body.event-planning-ref-layout .event-value-card svg,
+.event-body.event-planning-ref-layout .event-case-tags svg,
+.event-body.event-planning-ref-layout .event-workflow-step svg,
+.event-body.event-planning-ref-layout .event-icon-circle svg {
+  stroke: currentColor !important;
+  color: var(--ep-green-deep) !important;
+}
+
+/* Case Analysis 卡片标题 */
+.event-body.event-planning-ref-layout .event-case-card h3,
+.event-body.event-planning-ref-layout .event-category-card h3,
+.event-body.event-planning-ref-layout .event-value-card h3,
+.event-body.event-planning-ref-layout .event-overview-card h3 {
+  color: var(--ep-text) !important;
+}
+
+/* Case Analysis 小标签按钮 */
+.event-body.event-planning-ref-layout .event-case-tags span {
+  background: #fcfaf5 !important;
+  border: 1px solid var(--ep-line-soft) !important;
+  color: var(--ep-green-deep) !important;
+}
+
+/* 分割线 */
+.event-body.event-planning-ref-layout .event-divider,
+.event-body.event-planning-ref-layout .event-section,
+.event-body.event-planning-ref-layout .event-deliverables,
+.event-body.event-planning-ref-layout .event-value-created {
+  border-color: var(--ep-line) !important;
+}
+
+/* 标题左右细线 */
+.event-body.event-planning-ref-layout .event-heading-lines::before,
+.event-body.event-planning-ref-layout .event-heading-lines::after {
+  background: var(--ep-line) !important;
+}
+
+/* Hero 图片区可轻微暖化 */
+.event-body.event-planning-ref-layout .event-hero-gallery {
+  background: linear-gradient(
+    90deg,
+    rgba(246, 241, 232, 0.94) 0%,
+    rgba(246, 241, 232, 0.58) 22%,
+    rgba(246, 241, 232, 0.08) 42%,
+    rgba(246, 241, 232, 0) 56%
+  ) !important;
+}
+
+/* 底部 CTA 墨绿色块 → 更柔和一点 */
+.event-body.event-planning-ref-layout .event-cta {
+  background: linear-gradient(90deg, #406a3d 0%, #13300a 100%) !important;
+}
+
+.event-body.event-planning-ref-layout .event-cta,
+.event-body.event-planning-ref-layout .event-cta * {
+  color: #fffdf8 !important;
+}
+
+.event-body.event-planning-ref-layout .event-cta .cta-button {
+  border: 1px solid rgba(255, 253, 248, 0.5) !important;
+  background: transparent !important;
+}
+
+/* 如果 Quick Overview / Deliverables / Value Created 有特殊小图标容器，也统一柔和 */
+.event-body.event-planning-ref-layout .event-soft-khaki {
+  background: #b9a07b !important;
+  color: var(--ep-white) !important;
+}
+
+.event-body.event-planning-ref-layout .event-soft-sage {
+  background: #7f907c !important;
+  color: var(--ep-white) !important;
+}
+/* =========================================================
+   HERO TITLE COLOR ONLY - FINAL OVERRIDE
+   只修改 Hero 大标题颜色，不影响其他标题 / 图标 / 按钮
+========================================================= */
+
+html body.event-body.event-planning-ref-layout .event-hero .event-hero-copy h1,
+html body.event-body.event-planning-ref-layout .event-hero .event-hero-copy h1 span {
+  color: #253D28 !important;
+}
+/* =========================================================
+   CASE ANALYSIS TITLE COLOR FIX
+   只修改 Case Analysis 标题颜色
+========================================================= */
+
+html body.event-body.event-planning-ref-layout .event-case-header h2 {
+  color: #253D28 !important;
+}
+
+html body.event-body.event-planning-ref-layout .event-case-header h2 span {
+  color: #71685f !important;
+}

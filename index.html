@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Cecilia Xian Portfolio, digital marketing & visual design works"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#top">Cecilia Xian</a>
+  <nav class="nav" aria-label="Main navigation">
+    <a href="#works">Works</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+<section class="hero hero-centered">
+  <div class="hero-content hero-centered-content">
+    <p class="hero-badge">
+      <span></span>
+      Portfolio / 2026
+    </p>
+
+    <h1>Cecilia Xian</h1>
+
+    <p class="hero-lead">
+      Specialized in digital marketing, social media management, brand communication,
+      event planning and integrated campaign strategy. I help brands communicate clearly,
+      grow consistently and build meaningful online presence.
+    </p>
+
+    <div class="hero-actions">
+      <a class="button primary hero-work-button" href="#works">
+  View Works
+  <span>↓</span>
+</a>
+
+      <button class="button schedule-button" type="button" id="openScheduleModal">
+        Schedule a Call
+        <span>→</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<div class="schedule-modal" id="scheduleModal" aria-hidden="true">
+  <div class="schedule-modal-backdrop" id="closeScheduleBackdrop"></div>
+
+  <div class="schedule-modal-panel" role="dialog" aria-modal="true" aria-labelledby="scheduleModalTitle">
+    <button class="schedule-modal-close" type="button" id="closeScheduleModal">×</button>
+
+    <p class="modal-kicker">Let’s Talk</p>
+
+    <h2 id="scheduleModalTitle">Schedule a Call</h2>
+
+    <p class="modal-intro">
+      Tell me what you would like to discuss and when it is convenient to connect.
+    </p>
+
+    <form class="schedule-form" id="scheduleForm">
+      <label>
+        Your Name
+        <input type="text" name="name" placeholder="Your name" required>
+      </label>
+
+      <label>
+        What would you like to discuss?
+        <textarea name="message" rows="4" placeholder="Briefly describe your project, question, or collaboration idea." required></textarea>
+      </label>
+
+      <label>
+        Preferred Time
+        <input type="text" name="time" placeholder="Example: Next Tuesday afternoon / Weekdays after 3 PM">
+      </label>
+
+      <label>
+        Email or Phone
+        <input type="text" name="contact" placeholder="Your email or phone number" required>
+      </label>
+
+      <button class="modal-submit" type="submit">
+        Send Request
+        <span>→</span>
+      </button>
+    </form>
+  </div>
+</div>
+
+<section class="portfolio-hero">
+  <div class="hero-text">
+
+    <h1>  
+      Focused on global digital marketing & brand communication.<br>
+      To build meaningful brand presence online.
+    </h1>
+  </div>
+
+  <div class="hero-portrait">
+    <img src="assets/profile-transparent.png" alt="Cecilia Xian professional portrait">
+  </div>
+</section>
+
+<section class="section works" id="works">
+  <div class="section-header">
+    <p class="eyebrow">Selected Work</p>
+    <h2>Selected Projects</h2>
+  </div>
+
+  <div class="filters">
+  <button class="filter-button active" data-filter="all">All</button>
+  <button class="filter-button" data-filter="social">Social Media Management</button>
+  <button class="filter-button" data-filter="event">Event Planning</button>
+  <button class="filter-button" data-filter="campaign">Integrated Campaign Strategy</button>
+</div>
+
+  <div class="project-grid">
+  <article class="project-card" data-category="social">
+    <p class="project-type">Social Media Management</p>
+    <h3>Social Media Management</h3>
+    <p>
+      Managed global digital platforms including Google, Facebook, Instagram,
+      LinkedIn, Yelp and TikTok, supporting brand communication, audience growth
+      and product education.
+    </p>
+    <a href="social-media.html">View Details</a>
+  </article>
+
+  <article class="project-card" data-category="event">
+    <p class="project-type">Event Planning</p>
+    <h3>Event Planning</h3>
+    <p>
+      Planned and executed trade shows, annual meetings, product launches and
+      dealer conferences, creating structured and memorable brand experiences.
+    </p>
+    <a href="event-planning.html">View Details</a>
+  </article>
+
+  <article class="project-card" data-category="campaign">
+    <p class="project-type">Integrated Campaign Strategy</p>
+    <h3>Integrated Campaign Strategy</h3>
+    <p>
+      Designed integrated, data-informed campaigns across message strategy,
+      media planning, budget control and AI-assisted workflows to support
+      measurable business impact.
+    </p>
+    <a href="digital-campaigns.html">View Details</a>
+  </article>
+</div>
+</section>
+
+<section class="about section" id="about" aria-labelledby="about-title">
+  <div class="section-heading">
+    <p class="section-kicker">About</p>
+    <h2 id="about-title">About Me</h2>
+  </div>
+  <div class="about-layout">
+    <p>
+My academic background in science has equipped me with a strong ability to understand products, enabling me to analyze product logic from the perspectives of industrial manufacturing, biochemistry, and practical application scenarios. With six years of experience in brand marketing, I have developed solid expertise in brand communication, product promotion, client communication, and project execution. In addition, I have been continuously learning programming and data analysis on my own, with the goal of integrating marketing strategies with data-driven thinking to help clients understand product value and corporate strengths more effectively.
+    </p>
+    <ul class="facts">
+      <li><span>Focus</span> <strong>Branding / Marketing / Creation</strong></li>
+      <li><span>Tools</span> <strong>Codex, Gemini, HTML  </strong></li>
+      <li><span>Location</span> <strong>Zhuhai/ HK/ Remote</strong></li>
+    </ul>
+  </div>
+</section>
+
+<section class="contact section" id="contact" aria-labelledby="contact-title">
+  <div>
+    <p class="section-kicker">Contact</p>
+    <h2 id="contact-title">Let’s talk about new projects.</h2>
+  </div>
+  <a class="contact-link" href="mailto:hello@example.com">cecilia212969@gmail.com</a>
+</section>
+</main>
+
+<footer class="footer">
+  <span>© <span id="year"></span> Cecilia Xian</span>
+  <a href="#top">Back To Top</a>
+</footer>
+
+<script src="script.js"></script>
+<script>
+// Auto fill current year
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

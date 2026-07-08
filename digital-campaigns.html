@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Integrated Campaign Strategy | Cecilia Xian</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="campaign-body">
+  <header class="case-top-nav">
+    <a href="index.html" class="case-brand">Cecilia Xian</a>
+
+    <nav class="case-nav">
+      <a href="index.html#works">Works</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="campaign-page">
+
+    <!-- SVG Icon Library -->
+    <svg class="icon-defs" xmlns="http://www.w3.org/2000/svg">
+      <symbol id="cp-icon-pen" viewBox="0 0 48 48">
+        <path d="M10 36l2-8 19-19 7 7-19 19z"></path>
+        <path d="M28 12l7 7"></path>
+        <path d="M12 28l8 8"></path>
+      </symbol>
+
+      <symbol id="cp-icon-pie" viewBox="0 0 48 48">
+        <path d="M24 6v18h18A18 18 0 1 1 24 6z"></path>
+        <path d="M28 6a18 18 0 0 1 14 14H28z"></path>
+      </symbol>
+
+      <symbol id="cp-icon-network" viewBox="0 0 48 48">
+        <circle cx="12" cy="24" r="5"></circle>
+        <circle cx="36" cy="12" r="5"></circle>
+        <circle cx="36" cy="36" r="5"></circle>
+        <path d="M17 22l14-8"></path>
+        <path d="M17 26l14 8"></path>
+        <path d="M36 17v14"></path>
+      </symbol>
+
+      <symbol id="cp-icon-spark" viewBox="0 0 48 48">
+        <path d="M24 5l3 12 12 3-12 3-3 12-3-12-12-3 12-3z"></path>
+        <path d="M38 30l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"></path>
+      </symbol>
+
+      <symbol id="cp-icon-chat" viewBox="0 0 48 48">
+        <path d="M9 12h30v20H18l-9 7z"></path>
+        <path d="M17 20h14"></path>
+        <path d="M17 26h10"></path>
+      </symbol>
+
+      <symbol id="cp-icon-bars" viewBox="0 0 48 48">
+        <path d="M10 38h28"></path>
+        <rect x="13" y="24" width="5" height="14"></rect>
+        <rect x="23" y="16" width="5" height="22"></rect>
+        <rect x="33" y="9" width="5" height="29"></rect>
+      </symbol>
+
+      <symbol id="cp-icon-dollar" viewBox="0 0 48 48">
+        <circle cx="24" cy="24" r="17"></circle>
+        <path d="M24 13v22"></path>
+        <path d="M31 17c-2-2-5-3-8-2-3 1-5 3-5 5 0 3 3 4 6 4s7 1 7 5c0 3-3 5-7 5-3 0-6-1-8-3"></path>
+      </symbol>
+
+      <symbol id="cp-icon-ai" viewBox="0 0 48 48">
+        <rect x="12" y="12" width="24" height="24" rx="4"></rect>
+        <path d="M18 8v6"></path>
+        <path d="M24 8v6"></path>
+        <path d="M30 8v6"></path>
+        <path d="M18 34v6"></path>
+        <path d="M24 34v6"></path>
+        <path d="M30 34v6"></path>
+        <path d="M8 18h6"></path>
+        <path d="M8 24h6"></path>
+        <path d="M8 30h6"></path>
+        <path d="M34 18h6"></path>
+        <path d="M34 24h6"></path>
+        <path d="M34 30h6"></path>
+        <path d="M18 29l4-10h4l4 10"></path>
+        <path d="M20 25h8"></path>
+      </symbol>
+
+      <symbol id="cp-icon-target" viewBox="0 0 48 48">
+        <circle cx="24" cy="24" r="16"></circle>
+        <circle cx="24" cy="24" r="8"></circle>
+        <circle cx="24" cy="24" r="3"></circle>
+        <path d="M24 4v7"></path>
+        <path d="M24 37v7"></path>
+        <path d="M4 24h7"></path>
+        <path d="M37 24h7"></path>
+      </symbol>
+
+      <symbol id="cp-icon-user" viewBox="0 0 48 48">
+        <circle cx="24" cy="16" r="7"></circle>
+        <path d="M12 40c2-10 6-15 12-15s10 5 12 15"></path>
+      </symbol>
+
+      <symbol id="cp-icon-doc" viewBox="0 0 48 48">
+        <path d="M14 6h16l6 6v30H14z"></path>
+        <path d="M30 6v8h6"></path>
+        <path d="M19 22h14"></path>
+        <path d="M19 29h14"></path>
+        <path d="M19 36h9"></path>
+      </symbol>
+
+      <symbol id="cp-icon-book" viewBox="0 0 48 48">
+        <path d="M7 11c7 0 12 2 17 6v25c-5-4-10-6-17-6z"></path>
+        <path d="M41 11c-7 0-12 2-17 6v25c5-4 10-6 17-6z"></path>
+        <path d="M24 17v25"></path>
+      </symbol>
+
+      <symbol id="cp-icon-play" viewBox="0 0 48 48">
+        <circle cx="24" cy="24" r="17"></circle>
+        <path d="M20 16l13 8-13 8z"></path>
+      </symbol>
+
+      <symbol id="cp-icon-diamond" viewBox="0 0 48 48">
+        <path d="M24 5l18 14-18 24L6 19z"></path>
+        <path d="M6 19h36"></path>
+        <path d="M17 19l7 24 7-24"></path>
+      </symbol>
+
+      <symbol id="cp-icon-award" viewBox="0 0 48 48">
+        <circle cx="24" cy="18" r="10"></circle>
+        <path d="M18 28l-4 14 10-5 10 5-4-14"></path>
+      </symbol>
+
+      <symbol id="cp-icon-people" viewBox="0 0 48 48">
+        <circle cx="18" cy="17" r="5"></circle>
+        <circle cx="31" cy="16" r="5"></circle>
+        <path d="M8 38c1-8 5-12 10-12s9 4 10 12"></path>
+        <path d="M24 38c1-7 4-11 8-11 5 0 8 4 9 11"></path>
+      </symbol>
+
+      <symbol id="cp-icon-puzzle" viewBox="0 0 48 48">
+        <path d="M10 10h12c0-4 2-6 5-6s5 2 5 5-2 5-6 5v8h12v12H26c0 4-2 6-5 6s-5-2-5-5 2-5 6-5V22H10z"></path>
+      </symbol>
+
+      <symbol id="cp-icon-check" viewBox="0 0 48 48">
+        <circle cx="24" cy="24" r="17"></circle>
+        <path d="M16 24l6 6 11-13"></path>
+      </symbol>
+
+      <symbol id="cp-icon-link" viewBox="0 0 48 48">
+        <path d="M19 29l-3 3a8 8 0 0 1-11-11l6-6a8 8 0 0 1 11 0"></path>
+        <path d="M29 19l3-3a8 8 0 0 1 11 11l-6 6a8 8 0 0 1-11 0"></path>
+        <path d="M18 30l12-12"></path>
+      </symbol>
+
+      <symbol id="cp-icon-arrow" viewBox="0 0 48 48">
+        <path d="M10 36l26-26"></path>
+        <path d="M22 10h14v14"></path>
+      </symbol>
+
+      <symbol id="cp-icon-monitor" viewBox="0 0 48 48">
+        <rect x="8" y="10" width="32" height="22" rx="2"></rect>
+        <path d="M18 40h12"></path>
+        <path d="M24 32v8"></path>
+        <path d="M16 25l5-5 4 4 7-8"></path>
+      </symbol>
+
+      <symbol id="cp-icon-sliders" viewBox="0 0 48 48">
+        <path d="M12 10v28"></path>
+        <path d="M24 10v28"></path>
+        <path d="M36 10v28"></path>
+        <circle cx="12" cy="18" r="4"></circle>
+        <circle cx="24" cy="30" r="4"></circle>
+        <circle cx="36" cy="22" r="4"></circle>
+      </symbol>
+
+      <symbol id="cp-icon-globe" viewBox="0 0 48 48">
+        <circle cx="24" cy="24" r="17"></circle>
+        <path d="M7 24h34"></path>
+        <path d="M24 7c5 5 7 11 7 17s-2 12-7 17"></path>
+        <path d="M24 7c-5 5-7 11-7 17s2 12 7 17"></path>
+      </symbol>
+
+      <symbol id="cp-icon-image" viewBox="0 0 48 48">
+        <rect x="8" y="10" width="32" height="28" rx="3"></rect>
+        <circle cx="18" cy="20" r="3"></circle>
+        <path d="M12 34l10-10 7 7 4-4 7 7"></path>
+      </symbol>
+
+      <symbol id="cp-icon-brief" viewBox="0 0 48 48">
+        <rect x="8" y="14" width="32" height="24" rx="3"></rect>
+        <path d="M18 14v-4h12v4"></path>
+        <path d="M8 24h32"></path>
+      </symbol>
+    </svg>
+
+    <!-- Hero -->
+    <section class="campaign-hero">
+      <div class="campaign-hero-copy">
+        <h1>Integrated<br>Campaign Strategy</h1>
+
+        <p class="campaign-lead">
+          I design integrated, data-informed campaigns that align message,
+          channels, and budget to create measurable business impact. By combining
+          strategic copywriting, cross-channel planning, and AI-assisted workflows,
+          I help brands communicate with clarity, consistency, and efficiency.
+        </p>
+
+        <div class="campaign-capabilities">
+          <article>
+            <div class="campaign-mini-icon"><svg><use href="#cp-icon-pen"></use></svg></div>
+            <h3>Strategic Copywriting</h3>
+            <p>Craft clear, persuasive messages that connect and convert.</p>
+          </article>
+
+          <article>
+            <div class="campaign-mini-icon"><svg><use href="#cp-icon-pie"></use></svg></div>
+            <h3>Budget Control</h3>
+            <p>Plan, allocate, and optimize budgets for maximum ROI.</p>
+          </article>
+
+          <article>
+            <div class="campaign-mini-icon"><svg><use href="#cp-icon-network"></use></svg></div>
+            <h3>Multi-channel Planning</h3>
+            <p>Build cohesive campaigns across channels and formats.</p>
+          </article>
+
+          <article>
+            <div class="campaign-mini-icon"><svg><use href="#cp-icon-spark"></use></svg></div>
+            <h3>AI-assisted Efficiency</h3>
+            <p>Leverage AI tools to accelerate research, creation, and analysis.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="campaign-hero-visual">
+        <img src="./assets/digital/campaign-strategy-hero.jpg" alt="Integrated campaign strategy workspace">
+      </div>
+    </section>
+
+    <!-- Quick Overview -->
+    <!-- Quick Overview -->
+<section class="campaign-section">
+  <div class="campaign-section-title centered">
+    <span></span>
+    <h2>Quick Overview <span class="campaign-title-cn">快速概览</span></h2>
+    <span></span>
+  </div>
+
+  <div class="campaign-overview-grid">
+    <article>
+      <div class="campaign-round-icon">
+        <svg><use href="#cp-icon-chat"></use></svg>
+      </div>
+      <h3>Message Strategy</h3>
+      <p class="campaign-cn-small">信息策略</p>
+      <p>Define core messages and tailor them to each audience.</p>
+    </article>
+
+    <article>
+      <div class="campaign-round-icon beige">
+        <svg><use href="#cp-icon-bars"></use></svg>
+      </div>
+      <h3>Media Mix</h3>
+      <p class="campaign-cn-small">媒体组合</p>
+      <p>Select the right channels to reach and engage.</p>
+    </article>
+
+    <article>
+      <div class="campaign-round-icon">
+        <svg><use href="#cp-icon-dollar"></use></svg>
+      </div>
+      <h3>Budget Control</h3>
+      <p class="campaign-cn-small">预算控制</p>
+      <p>Allocate wisely and monitor spend for best impact.</p>
+    </article>
+
+    <article>
+      <div class="campaign-round-icon beige">
+        <svg><use href="#cp-icon-ai"></use></svg>
+      </div>
+      <h3>AI Workflow</h3>
+      <p class="campaign-cn-small">AI 工作流</p>
+      <p>Use AI to speed up research, creation, and reporting.</p>
+    </article>
+  </div>
+</section>
+
+    <!-- Channel Matrix -->
+<section class="campaign-section">
+  <div class="campaign-section-title centered">
+    <span></span>
+    <h2>
+      Channel Matrix
+      <span class="campaign-title-cn">渠道矩阵</span>
+    </h2>
+    <span></span>
+  </div>
+
+  <div class="channel-matrix">
+    <!-- 顶部横向标题 -->
+    <div class="matrix-row matrix-header">
+      <div></div>
+
+      <div>
+        <svg><use href="#cp-icon-target"></use></svg>
+        <span class="matrix-label">
+          <strong>Search Ads</strong>
+          <small>搜索广告</small>
+        </span>
+      </div>
+
+      <div>
+        <svg><use href="#cp-icon-chat"></use></svg>
+        <span class="matrix-label">
+          <strong>Social Ads</strong>
+          <small>社交广告</small>
+        </span>
+      </div>
+
+      <div>
+        <svg><use href="#cp-icon-book"></use></svg>
+        <span class="matrix-label">
+          <strong>Print / Magazine</strong>
+          <small>平面 / 杂志</small>
+        </span>
+      </div>
+
+      <div>
+        <svg><use href="#cp-icon-play"></use></svg>
+        <span class="matrix-label">
+          <strong>Streaming Media</strong>
+          <small>流媒体广告</small>
+        </span>
+      </div>
+    </div>
+
+    <!-- 第1行 -->
+    <div class="matrix-row">
+      <div>
+        <svg><use href="#cp-icon-target"></use></svg>
+        <span class="matrix-label">
+          <strong>Focus</strong>
+          <small>核心目标</small>
+        </span>
+      </div>
+      <div>Capture intent and drive action</div>
+      <div>Build awareness and engagement</div>
+      <div>Build credibility and brand presence</div>
+      <div>Tell stories and create emotional impact</div>
+    </div>
+
+    <!-- 第2行 -->
+    <div class="matrix-row">
+      <div>
+        <svg><use href="#cp-icon-chat"></use></svg>
+        <span class="matrix-label">
+          <strong>Message Style</strong>
+          <small>信息风格</small>
+        </span>
+      </div>
+      <div>Direct, benefit-driven, keyword-focused</div>
+      <div>Short, visual, engaging, scroll-stopping</div>
+      <div>Informative, trustworthy, brand-building</div>
+      <div>Story-led, immersive, brand experience</div>
+    </div>
+
+    <!-- 第3行 -->
+    <div class="matrix-row">
+      <div>
+        <svg><use href="#cp-icon-user"></use></svg>
+        <span class="matrix-label">
+          <strong>My Role</strong>
+          <small>我的职责</small>
+        </span>
+      </div>
+      <div>Keyword &amp; copy strategy, and structure</div>
+      <div>Audience targeting, creative direction</div>
+      <div>Headline &amp; body copy, layout collaboration</div>
+      <div>Script &amp; message, creative collaboration</div>
+    </div>
+
+    <!-- 第4行 -->
+    <div class="matrix-row">
+      <div>
+        <svg><use href="#cp-icon-doc"></use></svg>
+        <span class="matrix-label">
+          <strong>Deliverables</strong>
+          <small>交付内容</small>
+        </span>
+      </div>
+      <div>Ad copy, extensions, landing page copy</div>
+      <div>Ad copy, captions, creative brief</div>
+      <div>Print copy, editorial content, CTA</div>
+      <div>Script, narration, screen copy</div>
+    </div>
+
+    <!-- 第5行 -->
+    <div class="matrix-row">
+      <div>
+        <svg><use href="#cp-icon-diamond"></use></svg>
+        <span class="matrix-label">
+          <strong>Value</strong>
+          <small>价值体现</small>
+        </span>
+      </div>
+      <div>High intent reach, measurable ROI</div>
+      <div>Broader reach, strong engagement</div>
+      <div>Authority building, long-term trust</div>
+      <div>High recall, strong brand lift</div>
+    </div>
+  </div>
+</section>
+
+    <!-- Framework + Budget -->
+    <section class="campaign-split-section">
+      <article class="campaign-process-card">
+        <div class="campaign-section-title">
+          <span></span>
+          <h2>Message Strategy Framework <span class="campaign-title-cn">信息策略框架</span></h2>
+        </div>
+
+        <div class="campaign-flow">
+          <div>
+            <div class="campaign-flow-icon"><svg><use href="#cp-icon-award"></use></svg></div>
+            <h3>Brand Message</h3>
+            <p>Define the core promise and voice.</p>
+          </div>
+
+          <b>→</b>
+
+          <div>
+            <div class="campaign-flow-icon"><svg><use href="#cp-icon-diamond"></use></svg></div>
+            <h3>Product Benefits</h3>
+            <p>Translate features into clear benefits.</p>
+          </div>
+
+          <b>→</b>
+
+          <div>
+            <div class="campaign-flow-icon"><svg><use href="#cp-icon-people"></use></svg></div>
+            <h3>Audience-tailored Messaging</h3>
+            <p>Address needs, pain points, and motivations.</p>
+          </div>
+
+          <b>→</b>
+
+          <div>
+            <div class="campaign-flow-icon"><svg><use href="#cp-icon-puzzle"></use></svg></div>
+            <h3>Channel Adaptation</h3>
+            <p>Adjust tone, format, and emphasis for each channel.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="campaign-process-card">
+        <div class="campaign-section-title">
+          <span></span>
+          <h2>Budget Control Process <span class="campaign-title-cn">预算控制流程</span></h2>
+        </div>
+
+        <div class="campaign-flow five">
+          <div>
+            <div class="campaign-flow-icon"><svg><use href="#cp-icon-doc"></use></svg></div>
+            <h3>Planning</h3>
+            <p>Set objectives, KPIs, and total budget.</p>
+          </div>
+
+          <b>→</b>
+
+          <div>
+            <div class="campaign-flow-icon"><svg><use href="#cp-icon-pie"></use></svg></div>
+            <h3>Allocation</h3>
+            <p>Distribute budget across channels and tactics.</p>
+          </div>
+
+          <b>→</b>
+
+          <div>
+            <div class="campaign-flow-icon"><svg><use href="#cp-icon-monitor"></use></svg></div>
+            <h3>Monitoring</h3>
+            <p>Track spend and performance in real time.</p>
+          </div>
+
+          <b>→</b>
+
+          <div>
+            <div class="campaign-flow-icon"><svg><use href="#cp-icon-sliders"></use></svg></div>
+            <h3>Optimization</h3>
+            <p>Reallocate and refine for better performance.</p>
+          </div>
+
+          <b>→</b>
+
+          <div>
+            <div class="campaign-flow-icon"><svg><use href="#cp-icon-check"></use></svg></div>
+            <h3>Recap</h3>
+            <p>Summarize results and capture learnings.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+   <!-- Campaign Applications -->
+<section class="campaign-section">
+  <div class="campaign-section-title centered">
+    <span></span>
+    <h2>
+      Campaign Applications
+      <span class="campaign-title-cn">活动应用场景</span>
+    </h2>
+    <span></span>
+  </div>
+
+  <div class="campaign-app-grid">
+    <article class="campaign-app-card">
+      <div class="campaign-app-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 13h3l8 4V7l-8 4H4v2Z"></path>
+          <path d="M17 9.5c1 .8 1.5 1.6 1.5 2.5S18 13.7 17 14.5"></path>
+          <path d="M7 13v4"></path>
+        </svg>
+      </div>
+
+      <div class="campaign-app-content">
+        <h3>
+          Product Awareness
+          <span class="campaign-app-cn">产品认知</span>
+        </h3>
+        <p>
+          Increase visibility and introduce new products to the right audiences.
+        </p>
+      </div>
+    </article>
+
+    <article class="campaign-app-card">
+      <div class="campaign-app-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 5h16l-6.5 7.5V19l-3 1v-7.5L4 5Z"></path>
+        </svg>
+      </div>
+
+      <div class="campaign-app-content">
+        <h3>
+          Lead Generation
+          <span class="campaign-app-cn">获客转化</span>
+        </h3>
+        <p>
+          Drive quality leads through compelling offers and optimized funnels.
+        </p>
+      </div>
+    </article>
+
+    <article class="campaign-app-card">
+      <div class="campaign-app-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 3 19 6v5c0 4.4-2.8 8.3-7 10-4.2-1.7-7-5.6-7-10V6l7-3Z"></path>
+          <path d="m9.5 12 1.7 1.7 3.8-4"></path>
+        </svg>
+      </div>
+
+      <div class="campaign-app-content">
+        <h3>
+          Brand Trust
+          <span class="campaign-app-cn">品牌信任</span>
+        </h3>
+        <p>
+          Build credibility and loyalty through consistent and valuable communication.
+        </p>
+      </div>
+    </article>
+
+    <article class="campaign-app-card">
+      <div class="campaign-app-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M7 3v3"></path>
+          <path d="M17 3v3"></path>
+          <path d="M4.5 8h15"></path>
+          <rect x="4.5" y="5" width="15" height="15" rx="2"></rect>
+          <path d="M8 12h2"></path>
+          <path d="M14 12h2"></path>
+          <path d="M8 16h2"></path>
+          <path d="M14 16h2"></path>
+        </svg>
+      </div>
+
+      <div class="campaign-app-content">
+        <h3>
+          Event Promotion
+          <span class="campaign-app-cn">活动推广</span>
+        </h3>
+        <p>
+          Maximize attendance and engagement with targeted multi-channel outreach.
+        </p>
+      </div>
+    </article>
+  </div>
+</section>
+
+    <!-- Deliverables -->
+    <section class="campaign-section">
+      <div class="campaign-section-title centered">
+        <span></span>
+        <h2>Deliverables <span class="campaign-title-cn">交付内容</span></h2>
+        <span></span>
+      </div>
+
+      <div class="campaign-deliverables">
+  <article>
+    <svg><use href="#cp-icon-doc"></use></svg>
+    <span>
+      Campaign<br>Brief
+      <small>活动简报</small>
+    </span>
+  </article>
+
+  <article>
+    <svg><use href="#cp-icon-chat"></use></svg>
+    <span>
+      Message<br>Framework
+      <small>信息框架</small>
+    </span>
+  </article>
+
+  <article>
+    <svg><use href="#cp-icon-people"></use></svg>
+    <span>
+      Keyword &<br>Audience Direction
+      <small>关键词与受众方向</small>
+    </span>
+  </article>
+
+  <article>
+    <svg><use href="#cp-icon-dollar"></use></svg>
+    <span>
+      Budget<br>Tracking
+      <small>预算追踪</small>
+    </span>
+  </article>
+
+  <article>
+    <svg><use href="#cp-icon-pencil"></use></svg>
+    <span>
+      Content<br>Calendar
+      <small>内容排期</small>
+    </span>
+  </article>
+
+  <article>
+    <svg><use href="#cp-icon-monitor"></use></svg>
+    <span>
+      Landing Page<br>Copy
+      <small>落地页文案</small>
+    </span>
+  </article>
+
+  <article>
+    <svg><use href="#cp-icon-bars"></use></svg>
+    <span>
+      Performance<br>Recap
+      <small>效果复盘</small>
+    </span>
+  </article>
+</div>
+      </article>
+
+     <!-- AI Workflow + AI Tools -->
+<section class="campaign-section campaign-ai-section">
+  <div class="campaign-ai-grid">
+    <!-- AI-Assisted Workflow -->
+    <article class="campaign-ai-card ai-workflow-card">
+      <div class="campaign-ai-title">
+        <h2>
+          AI-Assisted Workflow
+          <span>AI辅助工作流</span>
+        </h2>
+      </div>
+
+      <div class="ai-workflow-row">
+        <div class="ai-workflow-step">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <circle cx="12" cy="12" r="2"></circle>
+            <path d="M12 2v3"></path>
+            <path d="M12 19v3"></path>
+            <path d="M2 12h3"></path>
+            <path d="M19 12h3"></path>
+          </svg>
+          <h3>Research</h3>
+          <p>Market, audience, competitor insights.</p>
+        </div>
+
+        <div class="ai-workflow-arrow">→</div>
+
+        <div class="ai-workflow-step">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 20h4L19 9l-4-4L4 16v4Z"></path>
+            <path d="M13.5 6.5l4 4"></path>
+          </svg>
+          <h3>Copy Variations</h3>
+          <p>Generate options and test angles.</p>
+        </div>
+
+        <div class="ai-workflow-arrow">→</div>
+
+        <div class="ai-workflow-step">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M3 12h18"></path>
+            <path d="M12 3c2.4 2.4 3.5 5.4 3.5 9s-1.1 6.6-3.5 9"></path>
+            <path d="M12 3C9.6 5.4 8.5 8.4 8.5 12s1.1 6.6 3.5 9"></path>
+          </svg>
+          <h3>Localization</h3>
+          <p>Adapt tone, language, and context.</p>
+        </div>
+
+        <div class="ai-workflow-arrow">→</div>
+
+        <div class="ai-workflow-step">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="4" y="5" width="16" height="14" rx="2"></rect>
+            <path d="m7 16 3.5-3.5 2.5 2.5 2-2 2 3"></path>
+            <circle cx="9" cy="9" r="1.2"></circle>
+          </svg>
+          <h3>Creative Brief</h3>
+          <p>Produce briefs and content guidance.</p>
+        </div>
+
+        <div class="ai-workflow-arrow">→</div>
+
+        <div class="ai-workflow-step">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 3h7l4 4v14H7V3Z"></path>
+            <path d="M14 3v5h5"></path>
+            <path d="M10 12h6"></path>
+            <path d="M10 16h6"></path>
+          </svg>
+          <h3>Recap Support</h3>
+          <p>Summarize results and insights.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- AI Tools I Use -->
+    <article class="campaign-ai-card ai-tools-card">
+      <div class="campaign-ai-title">
+        <h2>
+          AI Tools I Use
+          <span>使用的AI工具</span>
+        </h2>
+      </div>
+
+      <div class="ai-tools-row">
+        <article class="ai-tool-item">
+          <img src="assets/tools/chatgpt.png" alt="ChatGPT">
+          <strong>ChatGPT</strong>
+        </article>
+
+        <article class="ai-tool-item">
+          <img src="assets/tools/codex.png" alt="Codex">
+          <strong>Codex</strong>
+        </article>
+
+        <article class="ai-tool-item">
+          <img src="assets/tools/gemini.png" alt="Gemini">
+          <strong>Gemini</strong>
+        </article>
+
+        <article class="ai-tool-item">
+          <img src="assets/tools/canva.png" alt="Canva">
+          <strong>Canva</strong>
+        </article>
+
+        <article class="ai-tool-item">
+          <img src="assets/tools/google-analytics.png" alt="Google Analytics">
+          <strong>Google<br>Analytics</strong>
+        </article>
+      </div>
+    </article>
+  </div>
+</section>
+
+    <!-- Value Created -->
+    <section class="campaign-section">
+      <div class="campaign-section-title centered">
+        <span></span>
+        <h2>Value Created <span class="campaign-title-cn">创造价值</span></h2>
+        <span></span>
+      </div>
+
+      <div class="campaign-value-grid">
+  <article>
+    <svg><use href="#cp-icon-target"></use></svg>
+    <h3>
+      Clearer Messaging
+      <span class="value-title-cn">信息更清晰</span>
+    </h3>
+    <p>Messages that are focused, relevant, and memorable.</p>
+  </article>
+
+  <article>
+    <svg><use href="#cp-icon-dollar"></use></svg>
+    <h3>
+      Efficient Budget Use
+      <span class="value-title-cn">预算高效利用</span>
+    </h3>
+    <p>Smart allocation and continuous optimization for better ROI.</p>
+  </article>
+
+  <article>
+    <svg><use href="#cp-icon-link"></use></svg>
+    <h3>
+      Multi-channel Consistency
+      <span class="value-title-cn">多渠道一致性</span>
+    </h3>
+    <p>Unified message and experience across every customer touchpoint.</p>
+  </article>
+
+  <article>
+  <svg viewBox="0 0 24 24" aria-hidden="true" class="value-inline-icon">
+    <path d="M5 19L19 5"></path>
+    <path d="M9 5h10v10"></path>
+  </svg>
+
+  <h3>
+    Higher Workflow Efficiency
+    <span class="value-title-cn">工作流效率提升</span>
+  </h3>
+
+  <p>AI-powered workflows that save time and improve output quality.</p>
+</article>
+</div>
+    </section>
+
+   <!-- Bottom CTA -->
+<section class="campaign-cta-section">
+  <div class="campaign-cta-banner">
+    <p>Looking for a strategic partner to grow your brand online?</p>
+
+    <a href="index.html#contact" class="campaign-cta-button">
+      Let’s Work Together
+      <span>→</span>
+    </a>
+  </div>
+</section>
+
+  </main>
+</body>
+</html>

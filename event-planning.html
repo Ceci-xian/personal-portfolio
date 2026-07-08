@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Planning & Brand Activation | Cecilia Xian</title>
+  <link rel="stylesheet" href="event-planning.css" />
+</head>
+
+<body class="event-body event-planning-ref-layout">
+  <header class="case-top-nav">
+    <a href="index.html" class="case-brand">Cecilia Xian</a>
+
+    <nav class="case-nav">
+      <a href="index.html#works">Works</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="event-page">
+
+    <!-- SVG Icons -->
+    <svg class="icon-defs" xmlns="http://www.w3.org/2000/svg">
+      <symbol id="icon-calendar" viewBox="0 0 48 48">
+        <rect x="10" y="12" width="28" height="26" rx="3"></rect>
+        <path d="M10 20h28"></path>
+        <path d="M17 8v8"></path>
+        <path d="M31 8v8"></path>
+        <path d="M17 27h4"></path>
+        <path d="M27 27h4"></path>
+        <path d="M17 33h4"></path>
+        <path d="M27 33h4"></path>
+      </symbol>
+
+      <symbol id="icon-refresh" viewBox="0 0 48 48">
+        <path d="M36 18a14 14 0 0 0-24-4l-4 4"></path>
+        <path d="M8 10v8h8"></path>
+        <path d="M12 30a14 14 0 0 0 24 4l4-4"></path>
+        <path d="M40 38v-8h-8"></path>
+      </symbol>
+
+      <symbol id="icon-target" viewBox="0 0 48 48">
+        <circle cx="24" cy="24" r="16"></circle>
+        <circle cx="24" cy="24" r="9"></circle>
+        <circle cx="24" cy="24" r="3"></circle>
+        <path d="M24 4v7"></path>
+        <path d="M24 37v7"></path>
+        <path d="M4 24h7"></path>
+        <path d="M37 24h7"></path>
+      </symbol>
+
+      <symbol id="icon-booth" viewBox="0 0 48 48">
+        <path d="M8 18h32"></path>
+        <path d="M12 18v22"></path>
+        <path d="M36 18v22"></path>
+        <path d="M16 18V9h16v9"></path>
+        <path d="M18 27h12"></path>
+        <path d="M18 34h8"></path>
+        <path d="M9 40h30"></path>
+      </symbol>
+
+      <symbol id="icon-people" viewBox="0 0 48 48">
+        <circle cx="18" cy="17" r="5"></circle>
+        <circle cx="31" cy="16" r="5"></circle>
+        <path d="M8 38c1-8 5-12 10-12s9 4 10 12"></path>
+        <path d="M24 38c1-7 4-11 8-11 5 0 8 4 9 11"></path>
+      </symbol>
+
+      <symbol id="icon-rocket" viewBox="0 0 48 48">
+        <path d="M26 31l-9 9-3-6-6-3 9-9"></path>
+        <path d="M18 30L9 39"></path>
+        <path d="M21 27c-2-6 1-13 6-18 4-4 9-5 13-5 0 4-1 9-5 13-5 5-12 8-18 6"></path>
+        <circle cx="31" cy="13" r="3"></circle>
+      </symbol>
+
+      <symbol id="icon-handshake" viewBox="0 0 48 48">
+        <path d="M18 20l6-6 6 6"></path>
+        <path d="M9 25l8-8 8 8"></path>
+        <path d="M39 25l-8-8-8 8"></path>
+        <path d="M15 28l8 8c2 2 4 2 6 0l8-8"></path>
+        <path d="M20 33l4-4"></path>
+        <path d="M25 36l4-4"></path>
+      </symbol>
+
+      <symbol id="icon-doc" viewBox="0 0 48 48">
+        <path d="M14 6h15l7 7v29H14z"></path>
+        <path d="M29 6v9h7"></path>
+        <path d="M19 22h14"></path>
+        <path d="M19 29h14"></path>
+        <path d="M19 36h9"></path>
+      </symbol>
+
+      <symbol id="icon-lightbulb" viewBox="0 0 48 48">
+        <path d="M17 22a7 7 0 1 1 14 0c0 4-3 6-5 9h-4c-2-3-5-5-5-9z"></path>
+        <path d="M21 36h6"></path>
+        <path d="M22 41h4"></path>
+        <path d="M24 5v5"></path>
+        <path d="M10 17l4 2"></path>
+        <path d="M38 17l-4 2"></path>
+      </symbol>
+
+      <symbol id="icon-clipboard" viewBox="0 0 48 48">
+        <rect x="12" y="10" width="24" height="32" rx="3"></rect>
+        <path d="M19 10c1-3 9-3 10 0"></path>
+        <path d="M18 21h12"></path>
+        <path d="M18 28h12"></path>
+        <path d="M18 35h8"></path>
+      </symbol>
+
+      <symbol id="icon-gear" viewBox="0 0 48 48">
+        <circle cx="24" cy="24" r="6"></circle>
+        <path d="M24 6v6"></path>
+        <path d="M24 36v6"></path>
+        <path d="M6 24h6"></path>
+        <path d="M36 24h6"></path>
+        <path d="M11 11l4 4"></path>
+        <path d="M33 33l4 4"></path>
+        <path d="M37 11l-4 4"></path>
+        <path d="M15 33l-4 4"></path>
+      </symbol>
+
+      <symbol id="icon-chart" viewBox="0 0 48 48">
+        <path d="M9 38h30"></path>
+        <path d="M13 34l8-8 6 5 10-14"></path>
+        <path d="M31 17h6v6"></path>
+      </symbol>
+
+      <symbol id="icon-megaphone" viewBox="0 0 48 48">
+        <path d="M8 27h8l20 8V13l-20 8H8z"></path>
+        <path d="M16 27v10"></path>
+        <path d="M38 19c2 2 3 4 3 6s-1 4-3 6"></path>
+      </symbol>
+
+      <symbol id="icon-cube" viewBox="0 0 48 48">
+        <path d="M24 5l16 9v20l-16 9-16-9V14z"></path>
+        <path d="M8 14l16 9 16-9"></path>
+        <path d="M24 23v20"></path>
+      </symbol>
+    </svg>
+
+    <!-- Hero -->
+    <section class="event-hero">
+      <div class="event-hero-copy">
+      <h1>
+  <span>Event Planning &</span>
+  <span>Brand Activation</span>
+</h1>
+        <p>
+          Creating structured and memorable brand experiences across trade shows,
+          company events, product launches, and dealer conferences.
+        </p>
+
+        <div class="event-tags">
+          <span>Trade Show</span>
+          <span>Annual Meeting</span>
+          <span>Product Launch</span>
+          <span>Dealer Conference</span>
+        </div>
+      </div>
+
+      <div class="event-hero-gallery event-hero-single">
+  <img src="./assets/event/event-hero-main.jpg" alt="Event Planning and Brand Activation hero image">
+</div>
+    </section>
+
+    <!-- Quick Overview -->
+    <section class="event-section compact-section">
+      <div class="event-section-head">
+        <h2>Quick Overview</h2>
+        <p>快速概览</p>
+      </div>
+
+      <div class="overview-grid">
+        <article class="overview-card">
+          <div class="round-icon">
+            <svg><use href="#icon-calendar"></use></svg>
+          </div>
+          <div class="overview-number"></div>
+          <div>
+            <h3>Event Types Covered</h3>
+            <p>活动类型覆盖</p>
+          </div>
+        </article>
+
+        <article class="overview-card">
+          <div class="round-icon">
+            <svg><use href="#icon-refresh"></use></svg>
+          </div>
+          <div>
+            <h3>Full-cycle Planning</h3>
+            <p>全案策划，从战略、执行、到总结</p>
+          </div>
+        </article>
+
+        <article class="overview-card">
+          <div class="round-icon">
+            <svg><use href="#icon-target"></use></svg>
+          </div>
+          <div>
+            <h3>Brand Experience Focus</h3>
+            <p>打造连贯、有影响力的品牌体验</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Event Categories -->
+    <section class="event-section">
+  <div class="event-section-head">
+    <h2>Event Categories</h2>
+    <p>活动类型</p>
+  </div>
+
+  <div class="event-category-grid">
+    <article class="event-category-card">
+      <div class="category-text">
+        <div class="round-icon small">
+          <svg><use href="#icon-booth"></use></svg>
+        </div>
+
+        <div>
+          <h3>Trade Show / Exhibition</h3>
+          <p>展会 / 展览</p>
+          <span>Maximize brand exposure and generate quality leads.</span>
+        </div>
+      </div>
+
+      <img src="./assets/event/trade-show.jpg" alt="Trade show exhibition">
+    </article>
+
+    <article class="event-category-card">
+      <div class="category-text">
+        <div class="round-icon small">
+          <svg><use href="#icon-people"></use></svg>
+        </div>
+
+        <div>
+          <h3>Company Annual Meeting</h3>
+          <p>公司年会</p>
+          <span>Align teams, celebrate achievements, and share future vision.</span>
+        </div>
+      </div>
+
+      <img src="./assets/event/annual-meeting.jpg" alt="Company annual meeting">
+    </article>
+
+    <article class="event-category-card">
+      <div class="category-text">
+        <div class="round-icon small">
+          <svg><use href="#icon-rocket"></use></svg>
+        </div>
+
+        <div>
+          <h3>Product Launch Event</h3>
+          <p>新品发布会</p>
+          <span>Create excitement and communicate product value effectively.</span>
+        </div>
+      </div>
+
+      <img src="./assets/event/product-launch.jpg" alt="Product launch event">
+    </article>
+
+    <article class="event-category-card">
+      <div class="category-text">
+        <div class="round-icon small">
+          <svg><use href="#icon-handshake"></use></svg>
+        </div>
+
+        <div>
+          <h3>Dealer Conference</h3>
+          <p>经销商大会</p>
+          <span>Strengthen partnerships and drive business growth together.</span>
+        </div>
+      </div>
+
+      <img src="./assets/event/dealer-conference.jpg" alt="Dealer conference">
+    </article>
+  </div>
+</section>
+
+    <!-- Workflow -->
+    <section class="event-section">
+      <div class="event-section-head">
+        <h2>Planning Workflow</h2>
+        <p>活动流程</p>
+      </div>
+
+      <div class="event-workflow">
+        <article>
+          <div class="workflow-icon"><svg><use href="#icon-doc"></use></svg></div>
+          <span>01</span>
+          <h3>Brief</h3>
+          <p>需求沟通</p>
+        </article>
+
+        <article>
+          <div class="workflow-icon"><svg><use href="#icon-lightbulb"></use></svg></div>
+          <span>02</span>
+          <h3>Concept</h3>
+          <p>创意构思</p>
+        </article>
+
+        <article>
+          <div class="workflow-icon"><svg><use href="#icon-clipboard"></use></svg></div>
+          <span>03</span>
+          <h3>Planning</h3>
+          <p>方案规划</p>
+        </article>
+
+        <article>
+          <div class="workflow-icon"><svg><use href="#icon-gear"></use></svg></div>
+          <span>04</span>
+          <h3>Production</h3>
+          <p>制作执行</p>
+        </article>
+
+        <article>
+          <div class="workflow-icon"><svg><use href="#icon-people"></use></svg></div>
+          <span>05</span>
+          <h3>On-site Execution</h3>
+          <p>现场执行</p>
+        </article>
+
+        <article>
+          <div class="workflow-icon"><svg><use href="#icon-chart"></use></svg></div>
+          <span>06</span>
+          <h3>Recap</h3>
+          <p>复盘总结</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Case Analysis -->
+<section class="event-case-section">
+  <div class="event-case-header">
+    <div>
+      <h2>
+        Case Analysis
+        <span>案例分析</span>
+      </h2>
+    </div>
+  </div>
+
+  <div class="event-case-grid">
+    <!-- Case 01 -->
+    <article class="event-case-card">
+      <figure class="event-case-image">
+        <img src="assets/event/event-case-wild-kitchen.jpg" alt="Hunan TV variety show event execution">
+      </figure>
+
+      <div class="event-case-content">
+        <h3>Hunan TV Variety Shows:<br>Wild Kitchen &amp; Back to Field</h3>
+        <p class="event-case-subtitle">On-site Execution &amp; Show Coordination</p>
+
+        <div class="event-case-info">
+          <p>
+            <strong>Goal</strong>
+            Ensure smooth on-site production flow and seamless event execution for variety show filming.
+          </p>
+
+          <p>
+            <strong>My Role</strong>
+            Managed on-site execution, run-of-show coordination, cross-team communication,
+            and implementation support.
+          </p>
+        </div>
+
+        <div class="event-case-tags">
+          <span>
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path></svg>
+            On-site Execution
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24"><path d="M7 3h10v18H7z"></path><path d="M9 8h6M9 12h6M9 16h4"></path></svg>
+            Run of Show
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24"><path d="M8 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"></path><path d="M2 21v-2a6 6 0 0 1 12 0v2"></path><path d="M17 8h4M19 6v4"></path></svg>
+            On-site Coordination
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24"><path d="M12 3 19 6v5c0 4.4-2.8 8.3-7 10-4.2-1.7-7-5.6-7-10V6l7-3Z"></path><path d="m9.5 12 1.7 1.7 3.8-4"></path></svg>
+            Implementation Support
+          </span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Case 02 -->
+    <article class="event-case-card">
+      <figure class="event-case-image">
+        <img src="assets/event/event-case-game-for-peace.jpg" alt="Game for Peace rainforest map launch event">
+      </figure>
+
+      <div class="event-case-content">
+        <h3>Game for Peace Rainforest<br>Map Launch Event</h3>
+        <p class="event-case-subtitle">Launch Event Execution &amp; Coordination</p>
+
+        <div class="event-case-info">
+          <p>
+            <strong>Goal</strong>
+            Support the launch of the new map through immersive event experience and brand communication.
+          </p>
+
+          <p>
+            <strong>My Role</strong>
+            Led launch-event coordination, on-site flow management, and execution support.
+          </p>
+        </div>
+
+        <div class="event-case-tags">
+          <span>
+            <svg viewBox="0 0 24 24"><path d="M5 19 19 5"></path><path d="M8 5h11v11"></path></svg>
+            Launch Execution
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13"></path><circle cx="4" cy="6" r="1"></circle><circle cx="4" cy="12" r="1"></circle><circle cx="4" cy="18" r="1"></circle></svg>
+            Flow Management
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24"><path d="M8 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"></path><path d="M2 21v-2a6 6 0 0 1 12 0v2"></path><path d="M17 8h4M19 6v4"></path></svg>
+            On-site Coordination
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24"><path d="M5 4v16"></path><path d="M5 5h12l-2 4 2 4H5"></path></svg>
+            Event Delivery
+          </span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Case 03 -->
+    <article class="event-case-card">
+      <figure class="event-case-image">
+        <img src="assets/event/event-case-viv-asia.jpg" alt="VTR booth at VIV Asia 2025">
+      </figure>
+
+      <div class="event-case-content">
+        <h3>VTR at VIV Asia 2025</h3>
+        <p class="event-case-subtitle">Exhibition Planning &amp; Execution</p>
+
+        <div class="event-case-info">
+          <p>
+            <strong>Goal</strong>
+            Increase brand visibility and support exhibition communication and client engagement.
+          </p>
+
+          <p>
+            <strong>My Role</strong>
+            Managed exhibition planning, execution coordination, material logistics,
+            and on-site support.
+          </p>
+        </div>
+
+        <div class="event-case-tags">
+          <span>
+            <svg viewBox="0 0 24 24"><path d="M4 20V8l8-4 8 4v12"></path><path d="M9 20v-6h6v6"></path></svg>
+            Booth Planning
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24"><path d="M3 7h7l2 2h9v10H3z"></path></svg>
+            Material Coordination
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24"><path d="M8 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"></path><path d="M2 21v-2a6 6 0 0 1 12 0v2"></path><path d="M17 8h4M19 6v4"></path></svg>
+            Client Reception
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24"><path d="M4 15v-3a8 8 0 0 1 16 0v3"></path><path d="M4 15h4v5H4zM16 15h4v5h-4z"></path></svg>
+            On-site Support
+          </span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Case 04 -->
+    <article class="event-case-card">
+      <figure class="event-case-image">
+        <img src="assets/event/event-case-dealer-conference.jpg" alt="VTR dealer conference on Dongao Island">
+      </figure>
+
+      <div class="event-case-content">
+        <h3>VTR Dealer Conference ·<br>Dong’ao Island</h3>
+        <p class="event-case-subtitle">Event Planning, Execution &amp; Coordination</p>
+
+        <div class="event-case-info">
+          <p>
+            <strong>Goal</strong>
+            Strengthen partner relationships while enhancing the meeting experience and brand communication.
+          </p>
+
+          <p>
+            <strong>My Role</strong>
+            Handled event planning, execution coordination, meeting flow management,
+            and on-site communication.
+          </p>
+        </div>
+
+        <div class="event-case-tags">
+          <span>
+            <svg viewBox="0 0 24 24"><path d="M7 3v3M17 3v3M4.5 8h15"></path><rect x="4.5" y="5" width="15" height="15" rx="2"></rect></svg>
+            Event Planning
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24"><path d="M7 3h10v18H7z"></path><path d="M9 8h6M9 12h6M9 16h4"></path></svg>
+            Meeting Agenda
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24"><path d="M8 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"></path><path d="M2 21v-2a6 6 0 0 1 12 0v2"></path><path d="M17 8h4M19 6v4"></path></svg>
+            On-site Coordination
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24"><path d="M4 13h3l8 4V7l-8 4H4v2Z"></path><path d="M17 9.5c1 .8 1.5 1.6 1.5 2.5S18 13.7 17 14.5"></path></svg>
+            Brand Communication
+          </span>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <div class="event-case-dots" aria-hidden="true">
+    <span class="active"></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</section>
+
+    <!-- Deliverables -->
+    <section class="event-section compact-section">
+      <div class="event-section-head">
+        <h2>Deliverables</h2>
+        <p>交付内容</p>
+      </div>
+
+      <div class="deliverable-grid">
+        <article><svg><use href="#icon-doc"></use></svg><h3>Event Proposal</h3><p>活动方案</p></article>
+        <article><svg><use href="#icon-calendar"></use></svg><h3>Agenda</h3><p>活动议程</p></article>
+        <article><svg><use href="#icon-clipboard"></use></svg><h3>Run of Show</h3><p>流程表</p></article>
+        <article><svg><use href="#icon-target"></use></svg><h3>Stage Visuals</h3><p>舞台视觉</p></article>
+        <article><svg><use href="#icon-booth"></use></svg><h3>Signage</h3><p>导视设计</p></article>
+        <article><svg><use href="#icon-doc"></use></svg><h3>Presentation Deck</h3><p>演示文稿</p></article>
+        <article><svg><use href="#icon-calendar"></use></svg><h3>Invitation Materials</h3><p>邀请物料</p></article>
+        <article><svg><use href="#icon-chart"></use></svg><h3>Recap Report</h3><p>复盘报告</p></article>
+      </div>
+    </section>
+
+    <!-- Value Created -->
+    <section class="event-section">
+      <div class="event-section-head">
+        <h2>Value Created</h2>
+        <p>创造价值</p>
+      </div>
+
+      <div class="event-value-grid">
+        <article>
+          <svg><use href="#icon-megaphone"></use></svg>
+          <h3>Brand Presence</h3>
+          <p>Strengthen brand visibility and reinforce market presence.</p>
+        </article>
+
+        <article>
+          <svg><use href="#icon-people"></use></svg>
+          <h3>Audience Engagement</h3>
+          <p>Design experiences that connect and engage target audiences.</p>
+        </article>
+
+        <article>
+          <svg><use href="#icon-cube"></use></svg>
+          <h3>Product Communication</h3>
+          <p>Clearly communicate value and drive product understanding.</p>
+        </article>
+
+        <article>
+          <svg><use href="#icon-handshake"></use></svg>
+          <h3>Partner Relationship</h3>
+          <p>Build trust and long-term partnerships with stakeholders.</p>
+        </article>
+      </div>
+    </section>
+
+ <section class="event-cta">
+  <p>Looking for a strategic partner to grow your brand online?</p>
+  <a href="index.html#contact">Let’s Work Together →</a>
+</section>
+  </main>
+</body>
+</html>
